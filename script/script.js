@@ -1,3 +1,6 @@
+// Container
+var con = document.querySelector("#math-tool")
+
 // Buttons
 var lcm = document.querySelector("#lcm-btn");
 var gcf = document.querySelector("#gcf-btn");
@@ -63,7 +66,7 @@ lcm.addEventListener("click", function() {
         userOutput.value = answer * lower * upper;
         
     }
-})
+});
 gcf.addEventListener("click", function() {
     if (userInput.value.indexOf(",") < 0) {
         userOutput.value = userInput.value
@@ -102,12 +105,23 @@ gcf.addEventListener("click", function() {
 
         userOutput.value = answer;
     }
-})
+});
 square.addEventListener("click", function() {
     inputNum = parseFloat(userInput.value);
     userOutput.value = Math.pow(inputNum, 2);
-})
+});
 squareRoot.addEventListener("click", function() {
     inputNum = parseFloat(userInput.value);
     userOutput.value = Math.pow(inputNum, 0.5);
-})
+});
+
+window.addEventListener("resize", function() {
+    if ((window.innerWidth <= 767)&&(con.className == "container")) {
+        con.classList.remove("container");
+        con.classList.add("container-fluid");
+    }
+    else if ((window.innerWidth > 767)&&(con.className == "container-fluid")){
+        con.classList.remove("container-fluid");
+        con.classList.add("container");
+    }
+});

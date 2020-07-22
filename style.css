@@ -1,12 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap');
 
 body {
-    background-color: rgb(153, 152, 152)
 }
 
 header {
+    background-color: rgb(104, 102, 102);
     text-align: center;
     margin-top: 8px;
     font-family: Rowdies;
     font-size: 32px;
+}
+
+.math-tool {
+    background-color: rgb(196, 196, 196);
+    text-align: center;
+}
+
+.row {
 }

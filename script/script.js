@@ -50,10 +50,25 @@ lcm.addEventListener("click", function() {
         // Set to 1 so common factors can be accumulated multiplicatively
         answer = 1;
 
-        // Loop for each possible factor starting at 2
-        for (let i = 2; i <= (lower/2); i++) {
-            // "done" and "while" are included such that a factor can be included multiple times if necessary.
-            // Theoretically, the only numbers that need to be tested for factors are all of the prime numbers below the lower bound of inputs. This is more sloppy and inefficient.
+        // "done" and "while" are included such that a factor can be included multiple times if necessary.
+        // Checks for all prime factors of 2 so I don't have to check even numbers in the for loop
+        done = 0;
+        while (done != 1) {
+            if ((upper % 2 == 0)&&(lower % 2 == 0)) {
+                upper = upper / 2;
+                lower = lower / 2;
+                answer = answer * 2;
+            }
+            else {
+                done = 1;
+            }
+        }
+
+        // Loop for each possible odd factor starting at 3
+        for (let i = 3; i <= (lower/2); i += 2) {
+            // Theoretically, the only numbers that need to be tested for factors are all of the prime numbers below half of the lower bound.
+            // Unfortunately, the only code I can think of that can determine a list of all of the possible prime numbers could theoretically
+            // be almost as memory intensive as brute forcing all odd numbers
             done = 0;
             while (done != 1) {
                 if ((upper % i == 0)&&(lower % i == 0)) {
@@ -95,7 +110,19 @@ gcf.addEventListener("click", function() {
 
         answer = 1;
 
-        for (let i = 2; i <= (lower/2); i++) {
+        done = 0;
+        while (done != 1) {
+            if ((upper % 2 == 0)&&(lower % 2 == 0)) {
+                upper = upper / 2;
+                lower = lower / 2;
+                answer = answer * 2;
+            }
+            else {
+                done = 1;
+            }
+        }
+
+        for (let i = 3; i <= (lower/2); i += 2) {
             done = 0;
             while (done != 1) {
                 if ((upper % i == 0)&&(lower % i == 0)) {

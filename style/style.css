@@ -21,6 +21,11 @@ header {
     display: none;
 }
 
+#error {
+    font-weight: bolder;
+    display: none;
+}
+
 @media (max-width: 767px) {
     #arrow-right {
         display: none;

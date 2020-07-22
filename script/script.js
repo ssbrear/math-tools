@@ -14,13 +14,18 @@ var userOutput = document.querySelector("#num-output")
 // Input
 var inputNum = 0
 
+// Error
+var errorMsg = document.querySelector("#error");
+
 // Button Listeners
 
 // Both LCM and GCF are computed in a similar manner, so comments are only included for LCM.
 // LCM and GCF are computed by using what is referred to as the "cake method".
 lcm.addEventListener("click", function() {
+    errorMsg.style.display = "none"
     if (userInput.value.indexOf(",") < 0) {
-        userOutput.value = userInput.value
+        errorMsg.style.display = "inline-block"
+        return;
     }
     else {
         // Splits the user input into an array of strings, one for each number
@@ -68,8 +73,10 @@ lcm.addEventListener("click", function() {
     }
 });
 gcf.addEventListener("click", function() {
+    errorMsg.style.display = "none"
     if (userInput.value.indexOf(",") < 0) {
-        userOutput.value = userInput.value
+        errorMsg.style.display = "inline-block"
+        return;
     }
     else {
         var str = userInput.value.split(",");
@@ -107,10 +114,21 @@ gcf.addEventListener("click", function() {
     }
 });
 square.addEventListener("click", function() {
+    errorMsg.style.display = "none"
+    if (userInput.value.indexOf(",") >= 0) {
+        errorMsg.style.display = "inline-block"
+        return;
+    }
     inputNum = parseFloat(userInput.value);
+    console.log(inputNum);
     userOutput.value = Math.pow(inputNum, 2);
 });
 squareRoot.addEventListener("click", function() {
+    errorMsg.style.display = "none"
+    if (userInput.value.indexOf(",") >= 0) {
+        errorMsg.style.display = "inline-block"
+        return;
+    }
     inputNum = parseFloat(userInput.value);
     userOutput.value = Math.pow(inputNum, 0.5);
 });

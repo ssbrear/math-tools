@@ -24,7 +24,7 @@
             <!-- Text Instructions -->
             <div class="row justify-content-center">
                 <h1 class="mx-3" style="font-size: 16px; padding-bottom: 16px;">
-                    Insert a single number to use single-number operations and multiple numbers separated by commas to use multi-number operations.
+                    Insert a single number to use <span class="text-danger">single-number operations</span> and multiple numbers separated by commas to use <span class="text-primary">multi-number operations</span>.
                 </h1>
             </div>
 
@@ -40,19 +40,24 @@
                 <input class="col-10 col-md-5" type="text" size="50px" id="num-output" style="text-align: center;" placeholder="Output" readonly>
             </div>
 
+            <!-- Warning for invalid input -->
+            <div id="error" class="mt-5 row justify-content-center">
+                Error: Invalid input.
+            </div>
+
             <!-- Buttons -->
             <div class="row justify-content-between mt-5">
+                <div class="col-6 col-sm-3 py-3">
+                    <button type="button" class="btn btn-danger" id="square-btn">Square</button>
+                </div>
+                <div class="col-6 col-sm-3 py-3">
+                    <button type="button" class="btn btn-danger" id="square-root-btn">Square Root</button>
+                </div>
                 <div class="col-6 col-sm-3 py-3">
                     <button type="button" class="btn btn-primary" id="lcm-btn">LCM</button>
                 </div>
                 <div class="col-6 col-sm-3 py-3">
                     <button type="button" class="btn btn-primary" id="gcf-btn">GCF</button>
-                </div>
-                <div class="col-6 col-sm-3 py-3">
-                    <button type="button" class="btn btn-primary" id="square-btn">Square</button>
-                </div>
-                <div class="col-6 col-sm-3 py-3">
-                    <button type="button" class="btn btn-primary" id="square-root-btn">Square Root</button>
                 </div>
             </div>
         </form>

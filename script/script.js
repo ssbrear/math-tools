@@ -51,7 +51,7 @@ lcm.addEventListener("click", function() {
         answer = 1;
 
         // Loop for each possible factor starting at 2
-        for (let i = 2; i <= lower; i++) {
+        for (let i = 2; i <= (lower/2); i++) {
             // "done" and "while" are included such that a factor can be included multiple times if necessary.
             // Theoretically, the only numbers that need to be tested for factors are all of the prime numbers below the lower bound of inputs. This is more sloppy and inefficient.
             done = 0;
@@ -95,7 +95,7 @@ gcf.addEventListener("click", function() {
 
         answer = 1;
 
-        for (let i = 2; i <= lower; i++) {
+        for (let i = 2; i <= (lower/2); i++) {
             done = 0;
             while (done != 1) {
                 if ((upper % i == 0)&&(lower % i == 0)) {

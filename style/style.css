@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap');
 
 body {
+    width: 100%;
 }
 
 header {
@@ -11,11 +12,24 @@ header {
     font-size: 32px;
 }
 
-.math-tool {
+#math-tool {
     background-color: rgb(196, 196, 196);
     text-align: center;
 }
 
 .row {
     margin-bottom: 8px;
+}
+
+#arrow-down {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #arrow-right {
+        display: none;
+    }
+    #arrow-down {
+        display: inline-block;
+    }
 }

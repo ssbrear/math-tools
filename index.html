@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Math Tools</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
     <header class="container-fluid">
@@ -16,39 +16,40 @@
         </div>
     </header>
 
-    <div class="container">
-        <div class="row justify-content-between">
-            <div class="col-12 math-tool">
-                <form class="py-3">
-                    <div class="row justify-content-center">
-                        <h1 style="font-size: 16px; padding-bottom: 16px;">
-                            Insert a single number to use single-number operations and multiple numbers separated by commas to use multi-number operations.
-                        </h1>
-                    </div>
-                    <div class="row justify-content-center">    
-                        <input type="text" size="50px" id="num-input" style="text-align: center;" placeholder="Input">
-                        ->
-                        <input type="text" size="50px" id="num-output" style="text-align: center;" placeholder="Output">
-                    </div>
-                    <div class="row justify-content-between mt-5">
-                        <div class="col-3">
-                            <button type="button" class="btn btn-primary" id="lcm-btn">LCM</button>
-                        </div>
-                        <div class="col-3">
-                            <button type="button" class="btn btn-primary" id="square-btn">Square</button>
-                        </div>
-                        <div class="col-3">
-                            <button type="button" class="btn btn-primary" id="square-root-btn">Square Root</button>
-                        </div>
-                        <div class="col-3">
-                            <button type="button" class="btn btn-primary" id="gcf-btn">GCF</button>
-                        </div>
-                    </div>
-                </form>
+    <div id="math-tool" class="container">
+        <form class="py-3">
+            <div class="row justify-content-center">
+                <h1 style="font-size: 16px; padding-bottom: 16px;">
+                    Insert a single number to use single-number operations and multiple numbers separated by commas to use multi-number operations.
+                </h1>
             </div>
-        </div>
+            <div class="row justify-content-center">    
+                <input class="col-10 col-md-5" type="text" size="50px" id="num-input" style="text-align: center;" placeholder="Input">
+                <div class="col-12 col-md-1" id="arrow-right">
+                    <img src="Assets/arrow-right.png" width="24px">
+                </div>
+                <div class="col-12 col-md-1 my-2" id="arrow-down">
+                    <img src="Assets/arrow-down.png" width="24px">
+                </div>
+                <input class="col-10 col-md-5" type="text" size="50px" id="num-output" style="text-align: center;" placeholder="Output" readonly>
+            </div>
+            <div class="row justify-content-between mt-5">
+                <div class="col-3">
+                    <button type="button" class="btn btn-primary" id="lcm-btn">LCM</button>
+                </div>
+                <div class="col-3">
+                    <button type="button" class="btn btn-primary" id="square-btn">Square</button>
+                </div>
+                <div class="col-3">
+                    <button type="button" class="btn btn-primary" id="square-root-btn">Square Root</button>
+                </div>
+                <div class="col-3">
+                    <button type="button" class="btn btn-primary" id="gcf-btn">GCF</button>
+                </div>
+            </div>
+        </form>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script/script.js"></script>
 </body>
 </html>

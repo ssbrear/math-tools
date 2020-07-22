@@ -21,23 +21,27 @@
             <div class="col-12 math-tool">
                 <form class="py-3">
                     <div class="row justify-content-center">
-                        <h1 style="font-size: 16px; padding-bottom: 16px;">Insert a single number to use single-number operations and multiple numbers separated by commas to use multi-number operations</h1>
+                        <h1 style="font-size: 16px; padding-bottom: 16px;">
+                            Insert a single number to use single-number operations and multiple numbers separated by commas to use multi-number operations.
+                        </h1>
                     </div>
-                    <div class="row justify-content-center">
-                        <input type="text" size="50px" name="num-input" style="text-align: center;">
+                    <div class="row justify-content-center">    
+                        <input type="text" size="50px" id="num-input" style="text-align: center;" placeholder="Input">
+                        ->
+                        <input type="text" size="50px" id="num-output" style="text-align: center;" placeholder="Output">
                     </div>
                     <div class="row justify-content-between mt-5">
                         <div class="col-3">
-                            <button id="lcm-btn">LCM</button>
+                            <button type="button" class="btn btn-primary" id="lcm-btn">LCM</button>
                         </div>
                         <div class="col-3">
-                            <button id="square-btn">Square</button>
+                            <button type="button" class="btn btn-primary" id="square-btn">Square</button>
                         </div>
                         <div class="col-3">
-                            <button id="square-root-btn">Square Root</button>
+                            <button type="button" class="btn btn-primary" id="square-root-btn">Square Root</button>
                         </div>
                         <div class="col-3">
-                            <button id="gcf-btn">GCF</button>
+                            <button type="button" class="btn btn-primary" id="gcf-btn">GCF</button>
                         </div>
                     </div>
                 </form>
